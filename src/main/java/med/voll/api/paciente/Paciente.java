@@ -9,7 +9,6 @@ import med.voll.api.endereco.Endereco;
 
 @Table(name = "pacientes")
 @Entity(name = "Paciente")
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -53,5 +52,33 @@ public class Paciente {
 
     public void excluir() {
         this.ativo = false;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public Boolean getAtivo() {
+        return ativo;
     }
 }
